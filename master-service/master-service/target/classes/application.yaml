@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: master-service
+  datasource:
+    url: jdbc:postgresql://localhost:5432/master_service_kotlin
+    username: postgres
+    password: 123
+    driver-class-name: org.postgresql.Driver
+    maximumPoolSize: 10
+
+  jpa:
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        ddl-auto: none
+        jdbc:
+          batch_size: 1000
+    show-sql: true
+    generate-ddl: true
+server:
+  port: 9328
+
+baseurl:
+  account: http://localhost:9002/rest/v1
+
+
